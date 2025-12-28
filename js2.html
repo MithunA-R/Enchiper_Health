@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Task</title>
+ #task1 
+<script>
+        function greeting() {
+            let name = prompt("Enter your name:");
+            alert("Namaste " + name);
+        }
+
+#task 4 
+<script>
+        function checkVote() {
+            let age = prompt("Enter your age:");
+
+            if (age >= 18) {
+                alert("You are eligible to vote");
+            } else {
+                alert("You are noteligible to vote");
+            }
+        }
+        checkVote();
+
+#task 2
+    <script>
+        function checkEvenOdd() {
+            let num = prompt("Enter a number:");
+
+            if (num % 2 === 0) {
+                alert(num + " is EVEN number");
+            } else {
+                alert(num + " is ODD number");
+            }
+        } 
+        checkEvenOdd();
+#task 7
+    <script>
+        function passwordcheck(){
+            let password=prompt("enter a password:");
+
+            if(password.length>=6){
+                alert("strong password");
+            }
+            else{
+                alert("weak password");
+
+            }
+            
+        }
+        passwordcheck();
+
+#task20
+        <script>
+        function exitconfirm(){
+            let exit=prompt("do you want to exit");
+
+            if (exit=="yes"){
+                alert("exit the page");
+            }
+            else{
+                alert("stay on the page");
+            }
+        }
+        exitconfirm();
+#task 8
+        <script>
+            function gradecalculator(){
+                let marks=prompt("enter your marks:");
+                let grade;
+
+                if (marks >= 80 && marks <= 100) {
+                    grade = "A";
+                } else if (marks >= 70 && marks < 80) {
+                    grade = "B";
+                } else if (marks >= 60 && marks < 70) {
+                    grade = "C";
+                } else if (marks >= 50 && marks < 60) {
+                    grade = "fail";
+                } else {
+                    grade = "Invalid marks";
+                }
+
+                alert("Your grade is: " + grade);
+              }         
+            gradecalculator();
+
+#task 9
+    <script>
+        function findLargest() {
+            let a = Number(prompt("Enter first number:"));
+            let b = Number(prompt("Enter second number:"));
+            let c = Number(prompt("Enter third number:"));
+
+            let largest;
+
+            if (a >= b && a >= c) {
+                largest = a;
+            } else if (b >= a && b >= c) {
+                largest = b;
+            } else {
+                largest = c;
+            }
+
+            alert("Largest number is: " + largest);
+        }
+        findLargest();
+#task 6
+    <script>
+                function sumofnumbers() {
+            let number=(prompt("Enter a limit:"));
+            let sum = 0;
+
+            for (let i = 1; i <= n; i++) {
+                sum = sum + i;
+            }
+
+            alert("Sum of numbers from 1 to " + n + " is: " + sum);
+        }
+        sumofnumbers();
+
+
+
+
+
+
+
+
+    </script>
+</head>
+
+<body onload="greeting()">
+    <h1>JavaScript Task Running...</h1>
+</body>
+</html>
