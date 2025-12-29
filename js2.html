@@ -9,9 +9,11 @@
             let name = prompt("Enter your name:");
             alert("Namaste " + name);
         }
+        greeting();
+    </script>
 
 #task 4 
-<script>
+    <script>
         function checkVote() {
             let age = prompt("Enter your age:");
 
@@ -22,6 +24,7 @@
             }
         }
         checkVote();
+    </script>
 
 #task 2
     <script>
@@ -35,6 +38,7 @@
             }
         } 
         checkEvenOdd();
+    </script>
 #task 7
     <script>
         function passwordcheck(){
@@ -50,6 +54,7 @@
             
         }
         passwordcheck();
+    </script>
 
 #task20
         <script>
@@ -64,6 +69,7 @@
             }
         }
         exitconfirm();
+    </script>
 #task 8
         <script>
             function gradecalculator(){
@@ -86,6 +92,7 @@
               }         
             gradecalculator();
 
+        </script>
 #task 9
     <script>
         function findLargest() {
@@ -106,23 +113,115 @@
             alert("Largest number is: " + largest);
         }
         findLargest();
+    </script>
 #task 6
     <script>
-                function sumofnumbers() {
-            let number=(prompt("Enter a limit:"));
-            let sum = 0;
-
+        function sumofnumbers() {
+            
             for (let i = 1; i <= n; i++) {
                 sum = sum + i;
             }
 
             alert("Sum of numbers from 1 to " + n + " is: " + sum);
+        }   
+        let number=(prompt("Enter a limit:"));
+        let sum = 0;
+
+        sumofnumbers(); -->
+
+
+<!-- #task 3
+    <script>
+        function add(){
+            return n1+n2;
         }
-        sumofnumbers();
+        function subtract(){
+            return n1-n2;
+
+        }
+         function multiply(){
+            return n1*n2;
+        }
+
+        
+        let n1=prompt("enter first number:")
+        let n2=prompt("enter second number:")
+        let operation=prompt("enter operation to be performed(add,subtract,multiply):")
+
+        if(operation==="add"){
+            alert("the sum is "+ add());
+        }
+        else if(operation==="subtract"){
+            alert("the difference is "+ subtract());
+        }
+        else if(operation==="multiply"){
+            alert("the product is "+ multiply());
+        }
+        else{
+            alert("invalid operation");
+        }
+    </script>
 
 
+ #task 5
+    <script>
+        let number = parseInt(prompt("Enter a number:"));
 
+for (let i = 1; i <= 10; i++) {
+  console.log(number + " x " + i + " = " + (number * i));
+}
+    </script> 
 
+ #task 10
+    <script>
+        let defaultUser = "Mithun";
+        let defaultPass = "6382";
+
+        let user = prompt("Enter username");
+        let pass = prompt("Enter password");
+
+        if (user === defaultUser && pass === defaultPass) {
+        console.log("Login Successful");
+        } 
+        else {
+            console.log("Invalid Username or Password");
+        } 
+     </script>
+            
+
+#task  11
+    <script>
+        let nums = [1, 2, 3, 4, 6];
+        let count = 0;
+
+        for (let i = 0; i < nums.length; i++) {
+        if (nums[i] % 2 === 0) {
+        count++;
+    }
+}
+
+console.log(count);
+</script> 
+
+#task 19
+    <script>
+        let n = parseInt(prompt("Enter a number")); 
+    let a = 0;  
+    let b = 0;   
+
+    for (let i = 1; i <= n; i++) { 
+    if (i % 2 === 0) {
+    a += i;   
+    } 
+    else {
+    b += i;   
+  }
+}
+
+console.log("Even Sum:", a);
+console.log("Odd Sum:", b); 
+
+    
 
 
 
@@ -130,7 +229,7 @@
     </script>
 </head>
 
-<body onload="greeting()">
+<body>
     <h1>JavaScript Task Running...</h1>
 </body>
 </html>
