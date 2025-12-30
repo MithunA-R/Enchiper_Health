@@ -219,7 +219,40 @@ console.log(count);
 }
 
 console.log("Even Sum:", a);
-console.log("Odd Sum:", b); 
+console.log("Odd Sum:", b);
+    </script>
+
+
+#task 14
+    <script>
+        let secret = 7;
+        let guess = Number(prompt("Guess the number"));
+
+        if (guess === secret) {
+            alert("Correct!");
+        } 
+        else if (guess > secret) {
+            alert("Too High");  
+        }
+        else {
+            alert("Too Low");
+        }
+    </script>
+
+#task 17
+    <script>
+        let num = Number(prompt("Enter a number"));
+        let count = 0;
+
+        while (num > 0) {
+        count++;
+        num = Math.floor(num / 10);
+        }
+
+        alert("Digit count: " + count);
+
+    </script>
+
 
     
 
@@ -233,3 +266,4 @@ console.log("Odd Sum:", b);
     <h1>JavaScript Task Running...</h1>
 </body>
 </html>
+
