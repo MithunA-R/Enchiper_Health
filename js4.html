@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+#task 11
+    <script>
+        let sentence = prompt("Enter a sentence:");
+        let words = sentence.split(" ");
+
+        let longestWord = "";
+
+        for (let i = 0; i < words.length; i++) {
+        if (words[i].length > longestWord.length) {
+        longestWord = words[i];
+        }
+    }
+
+    alert("Longest word is: " + longestWord);
+
+</script>
+#task 12
+        <script>
+            let sentence = prompt("Enter a sentence:");
+            let words = sentence.toLowerCase().split(" ");
+            let titleCase = "";
+
+            for (let i = 0; i < words.length; i++) {
+            titleCase += words[i][0].toUpperCase() + words[i].slice(1) + " ";
+            }
+
+            alert("Title Case: " + titleCase);
+
+        </script>
+
+
+
+
+#task 13
+        <script>
+        let mobile = prompt("Enter mobile number:");
+
+        let masked = "";
+
+        for (let i = 0; i < mobile.length - 4; i++) {
+        masked += "*";
+        }
+
+        masked += mobile.slice(-4);
+
+        alert("Masked Number: " + masked);
+</script>
+
+
+
+
+#task 14
+        <script>
+            let str = prompt("Enter a word");
+            let repeated = "";
+
+            for (let i = 0; i < str.length; i++) {
+            }
+
+            for (let j = i + 1; j < str.length; j++) {
+            }
+            if (str[i] == str[j]) {
+            }
+            if (!repeated.includes(str[i])) {
+                repeated = repeated + str[i] + " ";
+            
+        }
+        alert("Repeated characters: " + repeated);
+
+    </script>
+
+
+
+
+#task 15
+
+    <script>
+        let str = prompt("Enter a word").toLowerCase();
+
+        let vowels = 0;
+        let consonants = 0;
+
+        for (let i = 0; i < str.length; i++) {
+
+       let ch = str[i];
+
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+        vowels++;
+        }
+        else if (ch >= 'a' && ch <= 'z') {
+        consonants++;
+        }
+    }
+
+    alert("Vowels: " + vowels + "\nConsonants: " + consonants);
+
+
+
+</script>
+#task 16        
+        <script>
+            let sentence= prompt("Enter a sentence here:")
+            let res=""
+            let word= sentence.split(" ")
+            for (i=0; i <word.length;i++){
+                if(!res.includes(word[i])){
+                    res+=word[i] + " "
+            }
+                }
+            console.log("updated sentence:"+res.trim())
+        </script>
+
+# task 17
+        <script>
+            let str1=prompt("enter your string1:");
+            let str2=prompt("enter your string2:");
+            s1=str1.split("").sort().join("")
+            s2=str2.split("").sort().join("")
+            if(s1==s2){
+                alert("It is anagram")
+
+            }
+            else{
+                alert("Its is not anagram")
+            }
+            
+
+        </script>
+
+#task 18
+    <script>
+        let str1=prompt("enter a string1:");
+        let str2=prompt("enter a string2:");
+        if(str1.trim().length==str2.trim().length){
+            alert("Equal")
+
+        }
+        else{
+            alert("Not equal")
+        }
+
+    </script>
+
+#task 19
+    <script>
+        let s1=prompt("enter a string with number:");
+        let num = "1234567890"
+        let res = ""
+        for(i=0;i<s1.length;i++){
+            if(num.includes(s1[i]))
+                res+= s1[i]
+
+        }
+        console.log(res)
+
+    </script> 
+
+ #task 20
+    <script>
+        let pass= prompt("enter a password:")
+        let num = 0
+        let upper = 0
+        for (i=0;i<pass.length;i++){
+           ch=pass[i]
+           if(ch>="A" && ch<="Z"){
+            upper +=1
+           } 
+           if (ch>="0" && ch <="9"){
+            num+=1
+           }
+        }
+
+
+        if(pass.length>=8 && num!=0 && upper!=0){
+            alert("strong password")
+        }
+        else{
+            alert("weak pasword")
+        }
+    </script>
+         
+
+
+
+        <body>
+
+        </body>
+    </head>
+</html>
