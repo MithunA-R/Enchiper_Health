@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <button onclick="start()">start</button>
+        <button onclick="stop()">stop</button>
+        <script>
+        let run;
+        function start(){
+            run=setInterval(function(){
+                alert("Running....")
+            },1000);
+        }
+
+        function stop(){
+            clearInterval(run)
+            alert("its stopped..")
+        }
+
+
+        </script>
+    </body>
+</html>

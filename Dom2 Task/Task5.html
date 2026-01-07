@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="start()">Start</button>
+<button onclick="stop()">stop</button>
+
+<script>
+let timer;
+
+function start() {
+  timer = setTimeout(function () {
+    alert("10 seconds over");
+  }, 10000);
+}
+
+function stop() {
+  clearTimeout(timer);
+  alert("stopped")
+}
+</script>
+
+</body>
+</html>

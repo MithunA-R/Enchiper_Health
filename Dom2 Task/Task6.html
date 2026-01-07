@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="msg"></p>
+        <button onclick="cancel()">cancel</button>
+        <script>
+            let showmsg=setTimeout(function(){
+                document.getElementById("msg").innerText="Meassage Appeared"
+
+            },5000);
+
+        function cancel(){
+            clearTimeout(showmsg);
+            alert("cancelled")
+        }
+        </script>
+    </body>
+</html>
