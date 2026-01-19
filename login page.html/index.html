@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+  <style>
+     body{
+      font-family: Arial;
+      background:#f2f2f2;
+      text-align:center;
+    }
+    .box{
+      background:white;
+      width:300px;
+      margin:auto;
+      padding:20px;
+      border-radius:10px;
+      box-shadow:0 0 10px gray;
+    }
+    input{
+      width:90%;
+      padding:8px;
+      margin:5px;
+    }
+    button{
+      padding:6px 12px;
+      margin:5px;
+    }
+    table{
+      width:80%;
+      margin:20px auto;
+      border-collapse: collapse;
+      background:white;
+    }
+    th,td{
+      border:1px solid black;
+      padding:8px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <input type="text" id="username" placeholder="Enter your username">
+  <input type="password" id="password" placeholder="Enter your password">
+  <button onclick="saveData()">Submit</button>
+</div>
+
+<table border="1">
+  <thead>
+    <tr>
+      <td>Username</td>
+      <td>Password</td>
+      <td>Edit</td>
+      <td>Delete</td>
+    </tr>
+  </thead>
+  <tbody id="tablebody"></tbody>
+</table>
+
+<script>
+let users = JSON.parse(localStorage.getItem("users")) || [];
+let editIndex = null;
+
+displayData();
+
+function saveData(){
+  let username = document.getElementById("username").value;
+  let password = document.getElementById("password").value;
+
+  if(username === "" || password === ""){
+    alert("All fields are required");
+    return;
+  }
+
+  if(editIndex === null){
+    users.push({username, password});
+  }else{
+    users[editIndex] = {username, password};
+    editIndex = null;
+  }
+
+  localStorage.setItem("users", JSON.stringify(users));
+  clearForm();
+  displayData();
+}
+
+function displayData(){
+  let table = "";
+  users.forEach((user, index) => {
+    table += `
+      <tr>
+        <td>${user.username}</td>
+        <td>${user.password}</td>
+        <td><button onclick="editData(${index})">Edit</button></td>
+        <td><button onclick="deleteData(${index})">Delete</button></td>
+      </tr>
+    `;
+  });
+  document.getElementById("tablebody").innerHTML = table;
+}
+
+function deleteData(index){
+  users.splice(index,1);
+  localStorage.setItem("users", JSON.stringify(users));
+  displayData();
+}
+
+function editData(index){
+  document.getElementById("username").value = users[index].username;
+  document.getElementById("password").value = users[index].password;
+  editIndex = index;
+}
+
+function clearForm(){
+  document.getElementById("username").value = "";
+  document.getElementById("password").value = "";
+}
+</script>
+
+</body>
+</html>
